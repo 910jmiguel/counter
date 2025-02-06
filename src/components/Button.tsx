@@ -1,8 +1,17 @@
 import React from 'react'
 
-const Button = () => {
+interface ButtonProps {
+    onClick: () => void;
+    label: String;
+}
+
+const Button = ({ onClick, label }: ButtonProps) => {
   return (
-    <div>Button</div>
+    <div>
+        <button onClick = {onClick}>
+            {label}
+        </button>
+    </div>
   )
 }
 
